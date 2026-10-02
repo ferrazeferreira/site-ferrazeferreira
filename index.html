@@ -3,14 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ferraz e Ferreira Advogadas | Inventário, Planos de Saúde, Imóveis, INSS e Consumidor — São Paulo/SP</title>
-<meta name="description" content="Advocacia especializada em inventários e partilhas, planos de saúde e revisão de contratos, regularização de imóveis, INSS e direito do consumidor. Conteúdo jurídico informativo e atendimento claro. São Paulo/SP.">
+<title>Ferraz e Ferreira Advogadas | Família e Sucessões, Planos de Saúde, Previdenciário e Consumidor — São Paulo/SP</title>
+<meta name="description" content="Advocacia especializada em direito de família e sucessões (inventários, partilhas, divórcio), planos de saúde, direito previdenciário (INSS e aposentadorias), consumidor e regularização de imóveis. Conteúdo jurídico informativo e atendimento claro. São Paulo/SP.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --azul-noite:#0B1530;
-    --azul-marinho:#1B2A4A;
+    --azul-marinho:#1B2A4A;      /* base */
+    --azul-medio:#24365E;        /* mescla 1 */
+    --azul-claro:#31497C;        /* mescla 2 */
+    --azul-suave:#3E5A94;        /* mescla 3 */
     --dourado:#D4AF37;
     --dourado-escuro:#8C7325;
     --marfim:#F5F1E6;
@@ -19,88 +21,91 @@
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
-  body{font-family:var(--sans);background:var(--azul-noite);color:var(--marfim);line-height:1.65}
+  body{font-family:var(--sans);background:var(--azul-marinho);color:var(--marfim);line-height:1.65}
   h1,h2,h3{font-family:var(--serif)}
   .container{max-width:1100px;margin:0 auto;padding:0 24px}
 
   /* NAV */
-  nav{position:sticky;top:0;background:rgba(11,21,48,.95);backdrop-filter:blur(8px);border-bottom:1px solid rgba(212,175,55,.25);z-index:100}
+  nav{position:sticky;top:0;background:rgba(27,42,74,.96);backdrop-filter:blur(8px);border-bottom:1px solid rgba(212,175,55,.3);z-index:100}
   .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;max-width:1100px;margin:0 auto}
   .logo{font-family:var(--serif);font-size:1.25rem;color:var(--marfim);text-decoration:none}
   .logo span{color:var(--dourado)}
   .nav-links{display:flex;gap:26px;list-style:none}
   .nav-links a{color:var(--marfim);text-decoration:none;font-size:.95rem;opacity:.85}
   .nav-links a:hover{color:var(--dourado);opacity:1}
-  .nav-cta{background:var(--dourado);color:var(--azul-noite)!important;padding:8px 18px;border-radius:24px;font-weight:600;opacity:1!important}
+  .nav-cta{background:var(--dourado);color:var(--azul-marinho)!important;padding:8px 18px;border-radius:24px;font-weight:600;opacity:1!important}
   @media(max-width:760px){.nav-links li:not(.keep){display:none}}
 
   /* HERO */
   header{padding:96px 0 84px;background:
-    radial-gradient(ellipse at 75% 15%, rgba(212,175,55,.14), transparent 55%),
-    radial-gradient(ellipse at 10% 90%, rgba(27,42,74,.9), transparent 60%),
-    linear-gradient(160deg,#0B1530 0%,#1B2A4A 100%)}
+    radial-gradient(ellipse at 75% 15%, rgba(212,175,55,.16), transparent 55%),
+    radial-gradient(ellipse at 10% 90%, rgba(62,90,148,.55), transparent 60%),
+    linear-gradient(160deg,#1B2A4A 0%,#31497C 100%)}
   .kicker{color:var(--dourado);letter-spacing:3px;text-transform:uppercase;font-size:.8rem;font-weight:600}
   header h1{font-size:clamp(2rem,5vw,3.4rem);line-height:1.15;margin:18px 0 20px;max-width:780px}
   header h1 em{color:var(--dourado);font-style:normal}
-  header p.sub{max-width:640px;font-size:1.1rem;opacity:.9;font-weight:300}
+  header p.sub{max-width:640px;font-size:1.1rem;opacity:.92;font-weight:300}
   .hero-btns{margin-top:36px;display:flex;gap:16px;flex-wrap:wrap}
   .btn{display:inline-block;padding:14px 30px;border-radius:32px;text-decoration:none;font-weight:600;transition:.2s}
-  .btn-gold{background:var(--dourado);color:var(--azul-noite)}
+  .btn-gold{background:var(--dourado);color:var(--azul-marinho)}
   .btn-gold:hover{background:#e6c65a}
-  .btn-ghost{border:1px solid rgba(245,241,230,.4);color:var(--marfim)}
+  .btn-ghost{border:1px solid rgba(245,241,230,.45);color:var(--marfim)}
   .btn-ghost:hover{border-color:var(--dourado);color:var(--dourado)}
 
   /* SECTIONS */
   section{padding:80px 0}
   .sec-title{text-align:center;font-size:clamp(1.6rem,3.5vw,2.3rem);margin-bottom:12px}
   .sec-title span{color:var(--dourado)}
-  .sec-sub{text-align:center;opacity:.75;max-width:600px;margin:0 auto 48px;font-weight:300}
+  .sec-sub{text-align:center;opacity:.78;max-width:600px;margin:0 auto 48px;font-weight:300}
   .sec-sub-dark{text-align:center;color:#3a3f4d;max-width:600px;margin:0 auto 48px;font-weight:300}
 
-  /* AREAS */
-  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
-  .card{background:var(--azul-marinho);border:1px solid rgba(212,175,55,.2);border-radius:14px;padding:34px 28px;transition:.25s}
-  .card:hover{transform:translateY(-4px);border-color:var(--dourado)}
-  .card .icon{font-size:2rem;margin-bottom:14px}
-  .card h3{color:var(--dourado);font-size:1.25rem;margin-bottom:12px}
-  .card p{opacity:.85;font-size:.98rem;font-weight:300}
-  .card .lei{display:block;margin-top:12px;font-size:.8rem;color:var(--dourado-escuro);letter-spacing:.5px}
+  /* AREAS — grupos por especialização */
+  .areas-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px}
+  .area{background:var(--azul-medio);border:1px solid rgba(212,175,55,.25);border-radius:16px;padding:36px 30px;transition:.25s}
+  .area:hover{transform:translateY(-4px);border-color:var(--dourado)}
+  .area .icon{font-size:2rem;margin-bottom:14px}
+  .area h3{color:var(--dourado);font-size:1.35rem;margin-bottom:6px}
+  .area .genero{font-size:.82rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--marfim);opacity:.6;margin-bottom:16px}
+  .area ul{list-style:none;margin-bottom:14px}
+  .area ul li{padding:6px 0;border-bottom:1px solid rgba(245,241,230,.08);font-size:.95rem;font-weight:300;opacity:.9}
+  .area ul li::before{content:"—";color:var(--dourado);margin-right:10px}
+  .area .lei{display:block;margin-top:6px;font-size:.8rem;color:var(--dourado);opacity:.85;letter-spacing:.5px}
 
   /* ARTIGOS — seção clara */
   .artigos-sec{background:var(--marfim);color:#1c2233}
   .artigos-sec .sec-title span{color:var(--dourado-escuro)}
-  .artigo{background:#fff;border:1px solid rgba(11,21,48,.08);border-radius:14px;padding:34px 30px;margin-bottom:22px;box-shadow:0 2px 14px rgba(11,21,48,.05)}
+  .artigo{background:#fff;border:1px solid rgba(27,42,74,.08);border-radius:14px;padding:34px 30px;margin-bottom:22px;box-shadow:0 2px 14px rgba(27,42,74,.06)}
   .artigo h3{color:var(--azul-marinho);font-size:1.3rem;margin-bottom:6px}
   .artigo .data{font-size:.78rem;letter-spacing:1px;text-transform:uppercase;color:var(--dourado-escuro);margin-bottom:16px;font-weight:600}
   .artigo p{color:#2c3242;font-size:.99rem;margin-bottom:12px}
   .artigo p strong{color:var(--azul-marinho)}
-  .fontes{margin-top:18px;padding-top:14px;border-top:1px solid rgba(11,21,48,.1);font-size:.8rem;color:#5a6070}
+  .fontes{margin-top:18px;padding-top:14px;border-top:1px solid rgba(27,42,74,.1);font-size:.8rem;color:#5a6070}
   .fontes b{color:var(--azul-marinho);display:block;margin-bottom:4px;letter-spacing:1px;text-transform:uppercase;font-size:.72rem}
 
   /* ADVOGADAS */
-  .advogadas{background:linear-gradient(180deg,var(--azul-noite),var(--azul-marinho))}
+  .advogadas{background:linear-gradient(180deg,var(--azul-marinho),var(--azul-claro))}
   .adv-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:8px}
   @media(max-width:760px){.adv-grid{grid-template-columns:1fr}}
-  .adv-card{background:rgba(11,21,48,.5);border:1px solid rgba(212,175,55,.3);border-radius:16px;padding:40px 32px;text-align:center}
-  .monograma{width:88px;height:88px;border-radius:50%;background:var(--dourado);color:var(--azul-noite);font-family:var(--serif);font-size:2rem;font-weight:700;display:flex;align-items:center;justify-content:center;margin:0 auto 18px}
+  .adv-card{background:rgba(36,54,94,.6);border:1px solid rgba(212,175,55,.35);border-radius:16px;padding:40px 32px;text-align:center}
+  .monograma{width:88px;height:88px;border-radius:50%;background:var(--dourado);color:var(--azul-marinho);font-family:var(--serif);font-size:2rem;font-weight:700;display:flex;align-items:center;justify-content:center;margin:0 auto 18px}
   .adv-card h3{color:var(--marfim);font-size:1.3rem;margin-bottom:4px}
   .adv-card .oab{color:var(--dourado);font-size:.9rem;letter-spacing:1px;font-weight:600;margin-bottom:14px}
-  .adv-card p{opacity:.85;font-weight:300;font-size:.95rem}
-  .sobre-text{max-width:760px;margin:0 auto 48px;text-align:center;opacity:.88;font-weight:300}
+  .adv-card p{opacity:.88;font-weight:300;font-size:.95rem}
+  .sobre-text{max-width:760px;margin:0 auto 48px;text-align:center;opacity:.9;font-weight:300}
 
   /* FAQ */
-  details{background:var(--azul-marinho);border:1px solid rgba(212,175,55,.2);border-radius:10px;margin-bottom:14px;padding:18px 22px}
+  details{background:var(--azul-medio);border:1px solid rgba(212,175,55,.25);border-radius:10px;margin-bottom:14px;padding:18px 22px}
   summary{cursor:pointer;font-weight:600;color:var(--marfim)}
   summary::marker{color:var(--dourado)}
-  details p{margin-top:12px;opacity:.85;font-weight:300}
+  details p{margin-top:12px;opacity:.88;font-weight:300}
 
   /* CTA final */
-  .cta-box{background:linear-gradient(135deg,var(--azul-marinho),var(--azul-noite));border:1px solid rgba(212,175,55,.35);border-radius:20px;padding:56px 32px;text-align:center}
+  .cta-box{background:linear-gradient(135deg,var(--azul-claro),var(--azul-marinho));border:1px solid rgba(212,175,55,.4);border-radius:20px;padding:56px 32px;text-align:center}
   .cta-box h2{font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:14px}
   .cta-box h2 span{color:var(--dourado)}
-  .cta-box p{opacity:.85;max-width:540px;margin:0 auto 28px;font-weight:300}
+  .cta-box p{opacity:.88;max-width:540px;margin:0 auto 28px;font-weight:300}
 
-  footer{border-top:1px solid rgba(212,175,55,.2);padding:36px 0;text-align:center;font-size:.85rem;opacity:.65}
+  footer{border-top:1px solid rgba(212,175,55,.25);padding:36px 0;text-align:center;font-size:.85rem;opacity:.7}
   footer .sig{font-family:var(--serif);color:var(--dourado);font-size:1rem;opacity:1;margin-bottom:8px}
 </style>
 </head>
@@ -123,7 +128,7 @@
   <div class="container">
     <div class="kicker">Advocacia especializada</div>
     <h1>Cuidando do que é seu, <em>com profissionalismo e segurança.</em></h1>
-    <p class="sub">Inventário e partilha, planos de saúde, regularização de imóveis, INSS e direito do consumidor — orientação clara, do primeiro contato até a resolução. Atendimento em São Paulo/SP e à distância.</p>
+    <p class="sub">Direito de família e sucessões, planos de saúde, direito previdenciário, consumidor e regularização de imóveis — orientação clara, do primeiro contato até a resolução. Atendimento em São Paulo/SP e à distância.</p>
     <div class="hero-btns">
       <a class="btn btn-gold" href="https://wa.me/5511989275738" target="_blank">Chame no WhatsApp</a>
       <a class="btn btn-ghost" href="#conteudo">Leia nosso conteúdo</a>
@@ -134,44 +139,74 @@
 <section id="areas">
   <div class="container">
     <h2 class="sec-title">Áreas de <span>atuação</span></h2>
-    <p class="sec-sub">Especialidade com foco, experiência e atenção individual a cada caso.</p>
-    <div class="cards">
-      <div class="card">
-        <div class="icon">⚖️</div>
-        <h3>Inventário e Partilha</h3>
-        <p>Regularização da herança com agilidade — judicial ou em cartório. Prazos, impostos e partilha conduzidos com segurança, evitando multas e conflitos familiares.</p>
-        <span class="lei">CPC, art. 611 · Lei 11.441/07</span>
+    <p class="sec-sub">Especializações bem definidas — cada matéria tratada pela área correta, com profundidade.</p>
+    <div class="areas-grid">
+
+      <div class="area">
+        <div class="icon">👨‍👩‍👧‍👦</div>
+        <h3>Família e Sucessões</h3>
+        <div class="genero">Especialização do escritório</div>
+        <ul>
+          <li>Inventário judicial e extrajudicial</li>
+          <li>Partilha de bens</li>
+          <li>Divórcio judicial e extrajudicial</li>
+          <li>Pacto pré-nupcial e regime de bens</li>
+          <li>Curatela</li>
+        </ul>
+        <span class="lei">Código Civil · CPC, art. 611 · Lei 11.441/07</span>
       </div>
-      <div class="card">
+
+      <div class="area">
         <div class="icon">🛡️</div>
         <h3>Planos de Saúde</h3>
-        <p>Negativa de cobertura, revisão de contratos, cláusulas abusivas, reajustes e carências. Defesa técnica com base na legislação e na jurisprudência dos tribunais superiores.</p>
+        <div class="genero">Direito do consumo especializado</div>
+        <ul>
+          <li>Revisão de contratos</li>
+          <li>Negativa de cobertura e de tratamento</li>
+          <li>Cláusulas abusivas e reajustes</li>
+          <li>Carências e rede credenciada</li>
+        </ul>
         <span class="lei">Lei 9.656/98 · CDC · Súmula 608 STJ</span>
       </div>
-      <div class="card">
-        <div class="icon">🏠</div>
-        <h3>Imóveis e Regularização</h3>
-        <p>Usucapião extrajudicial em cartório, regularização de matrícula, adjudicação compulsória e questões de propriedade — com menos custo e menos tempo que a via judicial.</p>
-        <span class="lei">Lei 6.015/73, art. 216-A</span>
-      </div>
-      <div class="card">
-        <div class="icon">💍</div>
-        <h3>Divórcio e Família</h3>
-        <p>Divórcio consensual ou litigioso, judicial ou em cartório, com atenção à partilha de bens, guarda, alimentos e reorganização familiar com o menor desgaste possível.</p>
-        <span class="lei">Código Civil, arts. 226 e ss.</span>
-      </div>
-      <div class="card">
+
+      <div class="area">
         <div class="icon">🏛️</div>
-        <h3>INSS e Previdenciário</h3>
-        <p>Aposentadorias, auxílios, BPC/LOAS, revisões e recursos. Análise completa do histórico contributivo para buscar o benefício a que você tem direito.</p>
+        <h3>Direito Previdenciário</h3>
+        <div class="genero">INSS e regimes de previdência</div>
+        <ul>
+          <li>Aposentadorias</li>
+          <li>Auxílios e benefícios por incapacidade</li>
+          <li>BPC/LOAS</li>
+          <li>Revisões, recursos e ações judiciais</li>
+        </ul>
         <span class="lei">Lei 8.213/91 · Decreto 3.048/99</span>
       </div>
-      <div class="card">
+
+      <div class="area">
         <div class="icon">🤝</div>
-        <h3>Consumidor e Curatela</h3>
-        <p>Cobranças indevidas, negativação injusta e relações de consumo em geral; ações de curatela para proteção de idosos e pessoas incapazes, sempre na medida menos restritiva.</p>
-        <span class="lei">CDC · Lei 13.146/15 (EPCD)</span>
+        <h3>Direito do Consumidor</h3>
+        <div class="genero">Relações de consumo em geral</div>
+        <ul>
+          <li>Cobranças indevidas</li>
+          <li>Negativação injusta</li>
+          <li>Produtos e serviços defeituosos</li>
+          <li>Práticas abusivas</li>
+        </ul>
+        <span class="lei">Lei 8.078/90 (CDC)</span>
       </div>
+
+      <div class="area">
+        <div class="icon">🏠</div>
+        <h3>Imóveis e Regularização</h3>
+        <div class="genero">Propriedade e registro</div>
+        <ul>
+          <li>Usucapião extrajudicial em cartório</li>
+          <li>Regularização de matrícula</li>
+          <li>Adjudicação compulsória</li>
+        </ul>
+        <span class="lei">Lei 6.015/73, art. 216-A</span>
+      </div>
+
     </div>
   </div>
 </section>
@@ -216,7 +251,7 @@
 
     <article class="artigo">
       <h3>Inventário: o prazo de 2 meses que evita multa</h3>
-      <div class="data">Outubro 2026 · Inventário</div>
+      <div class="data">Outubro 2026 · Família e Sucessões</div>
       <p>O Código de Processo Civil (art. 611) estabelece que o inventário deve ser instaurado em até 2 meses a contar do falecimento. Passado esse prazo, pode incidir multa sobre o ITCMD — o imposto de transmissão, cujo percentual varia conforme o estado.</p>
       <p>E há uma alternativa que poucos conhecem: quando todos os herdeiros são maiores, capazes e estão de acordo, o inventário pode ser feito em cartório, por escritura pública (Lei nº 11.441/2007), sem ação judicial — mais rápido e com menos burocracia.</p>
       <div class="fontes"><b>Fontes</b>
@@ -226,7 +261,7 @@
 
     <article class="artigo">
       <h3>INSS negou o benefício? A negativa não é o fim</h3>
-      <div class="data">Outubro 2026 · INSS</div>
+      <div class="data">Outubro 2026 · Direito Previdenciário</div>
       <p>Receber uma negativa do INSS é mais comum do que se imagina — e, na maioria das vezes, reversível. O primeiro passo é entender o motivo: falta de tempo de contribuição, carência, enquadramento incorreto ou análise equivocada do histórico.</p>
       <p>Com a análise técnica do CNIS e do histórico contributivo, é possível apresentar recurso administrativo ou ingressar com ação judicial. Cada caminho tem seu momento — e a escolha certa aumenta as chances de êxito.</p>
       <div class="fontes"><b>Fontes</b>
@@ -239,13 +274,13 @@
 <section id="advogadas" class="advogadas">
   <div class="container">
     <h2 class="sec-title">Quem <span>atende você</span></h2>
-    <p class="sobre-text">O Ferraz e Ferreira Advogadas nasceu para oferecer atendimento jurídico humano e direto: você entende cada etapa do seu caso, sem juridiquês e sem surpresas. Especialização em inventários e partilhas, com atuação em planos de saúde, regularização de imóveis, família, matéria previdenciária e de consumo.</p>
+    <p class="sobre-text">O Ferraz e Ferreira Advogadas nasceu para oferecer atendimento jurídico humano e direto: você entende cada etapa do seu caso, sem juridiquês e sem surpresas. Especialização em direito de família e sucessões, com atuação em planos de saúde, direito previdenciário, consumidor e regularização de imóveis.</p>
     <div class="adv-grid">
       <div class="adv-card">
-        <div class="monograma">EF</div>
+        <div class="monograma">EC</div>
         <h3>Enilda Ferraz da Cunha</h3>
         <div class="oab">OAB/SP 249.980</div>
-        <p>Especialista em inventários e partilhas. Atuação em planejamento sucessório, família, previdenciário e direito do consumidor, com foco em soluções práticas — inclusive extrajudiciais.</p>
+        <p>Especialista em inventários e partilhas. Atuação em direito de família e sucessões — planejamento sucessório, divórcio, pactos pré-nupciais — com foco em soluções práticas, inclusive extrajudiciais.</p>
       </div>
       <div class="adv-card">
         <div class="monograma">EF</div>
