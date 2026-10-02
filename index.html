@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ferraz e Ferreira Advogadas | Inventário, Divórcio, Curatela, INSS e Consumidor — São Paulo/SP</title>
-<meta name="description" content="Advocacia especializada em inventários e partilhas (judicial e extrajudicial), divórcio, curatela, INSS, direito do consumidor e planos de saúde. Atendimento humano, claro e seguro. São Paulo/SP.">
+<title>Ferraz e Ferreira Advogadas | Inventário, Planos de Saúde, Imóveis, INSS e Consumidor — São Paulo/SP</title>
+<meta name="description" content="Advocacia especializada em inventários e partilhas, planos de saúde e revisão de contratos, regularização de imóveis, INSS e direito do consumidor. Conteúdo jurídico informativo e atendimento claro. São Paulo/SP.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
@@ -19,7 +19,7 @@
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
-  body{font-family:var(--sans);background:var(--azul-noite);color:var(--marfim);line-height:1.6}
+  body{font-family:var(--sans);background:var(--azul-noite);color:var(--marfim);line-height:1.65}
   h1,h2,h3{font-family:var(--serif)}
   .container{max-width:1100px;margin:0 auto;padding:0 24px}
 
@@ -28,20 +28,21 @@
   .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;max-width:1100px;margin:0 auto}
   .logo{font-family:var(--serif);font-size:1.25rem;color:var(--marfim);text-decoration:none}
   .logo span{color:var(--dourado)}
-  .nav-links{display:flex;gap:28px;list-style:none}
+  .nav-links{display:flex;gap:26px;list-style:none}
   .nav-links a{color:var(--marfim);text-decoration:none;font-size:.95rem;opacity:.85}
   .nav-links a:hover{color:var(--dourado);opacity:1}
   .nav-cta{background:var(--dourado);color:var(--azul-noite)!important;padding:8px 18px;border-radius:24px;font-weight:600;opacity:1!important}
   @media(max-width:760px){.nav-links li:not(.keep){display:none}}
 
   /* HERO */
-  header{padding:96px 0 80px;background:
-    radial-gradient(ellipse at 70% 20%, rgba(212,175,55,.12), transparent 55%),
+  header{padding:96px 0 84px;background:
+    radial-gradient(ellipse at 75% 15%, rgba(212,175,55,.14), transparent 55%),
+    radial-gradient(ellipse at 10% 90%, rgba(27,42,74,.9), transparent 60%),
     linear-gradient(160deg,#0B1530 0%,#1B2A4A 100%)}
   .kicker{color:var(--dourado);letter-spacing:3px;text-transform:uppercase;font-size:.8rem;font-weight:600}
-  header h1{font-size:clamp(2rem,5vw,3.4rem);line-height:1.15;margin:18px 0 20px;max-width:760px}
+  header h1{font-size:clamp(2rem,5vw,3.4rem);line-height:1.15;margin:18px 0 20px;max-width:780px}
   header h1 em{color:var(--dourado);font-style:normal}
-  header p.sub{max-width:620px;font-size:1.1rem;opacity:.9;font-weight:300}
+  header p.sub{max-width:640px;font-size:1.1rem;opacity:.9;font-weight:300}
   .hero-btns{margin-top:36px;display:flex;gap:16px;flex-wrap:wrap}
   .btn{display:inline-block;padding:14px 30px;border-radius:32px;text-decoration:none;font-weight:600;transition:.2s}
   .btn-gold{background:var(--dourado);color:var(--azul-noite)}
@@ -49,31 +50,43 @@
   .btn-ghost{border:1px solid rgba(245,241,230,.4);color:var(--marfim)}
   .btn-ghost:hover{border-color:var(--dourado);color:var(--dourado)}
 
-  /* AREAS */
+  /* SECTIONS */
   section{padding:80px 0}
   .sec-title{text-align:center;font-size:clamp(1.6rem,3.5vw,2.3rem);margin-bottom:12px}
   .sec-title span{color:var(--dourado)}
-  .sec-sub{text-align:center;opacity:.75;max-width:560px;margin:0 auto 48px;font-weight:300}
+  .sec-sub{text-align:center;opacity:.75;max-width:600px;margin:0 auto 48px;font-weight:300}
+  .sec-sub-dark{text-align:center;color:#3a3f4d;max-width:600px;margin:0 auto 48px;font-weight:300}
+
+  /* AREAS */
   .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
   .card{background:var(--azul-marinho);border:1px solid rgba(212,175,55,.2);border-radius:14px;padding:34px 28px;transition:.25s}
   .card:hover{transform:translateY(-4px);border-color:var(--dourado)}
   .card .icon{font-size:2rem;margin-bottom:14px}
   .card h3{color:var(--dourado);font-size:1.25rem;margin-bottom:12px}
   .card p{opacity:.85;font-size:.98rem;font-weight:300}
+  .card .lei{display:block;margin-top:12px;font-size:.8rem;color:var(--dourado-escuro);letter-spacing:.5px}
 
-  /* SOBRE */
-  .sobre{background:linear-gradient(180deg,var(--azul-noite),var(--azul-marinho))}
-  .sobre-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
-  @media(max-width:860px){.sobre-grid{grid-template-columns:1fr}}
-  .sobre h2{font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:20px}
-  .sobre p{opacity:.88;font-weight:300;margin-bottom:16px}
-  .valores{list-style:none;margin-top:10px}
-  .valores li{padding:8px 0;border-bottom:1px solid rgba(245,241,230,.08)}
-  .valores li::before{content:"—";color:var(--dourado);margin-right:12px}
-  .sobre-card{background:rgba(11,21,48,.55);border:1px solid rgba(212,175,55,.3);border-radius:16px;padding:40px;text-align:center}
-  .sobre-card .big{font-family:var(--serif);font-size:2.6rem;color:var(--dourado)}
-  .sobre-card .lbl{font-size:.85rem;letter-spacing:2px;text-transform:uppercase;opacity:.7;margin-top:6px}
-  .sobre-card .row{margin:26px 0}
+  /* ARTIGOS — seção clara */
+  .artigos-sec{background:var(--marfim);color:#1c2233}
+  .artigos-sec .sec-title span{color:var(--dourado-escuro)}
+  .artigo{background:#fff;border:1px solid rgba(11,21,48,.08);border-radius:14px;padding:34px 30px;margin-bottom:22px;box-shadow:0 2px 14px rgba(11,21,48,.05)}
+  .artigo h3{color:var(--azul-marinho);font-size:1.3rem;margin-bottom:6px}
+  .artigo .data{font-size:.78rem;letter-spacing:1px;text-transform:uppercase;color:var(--dourado-escuro);margin-bottom:16px;font-weight:600}
+  .artigo p{color:#2c3242;font-size:.99rem;margin-bottom:12px}
+  .artigo p strong{color:var(--azul-marinho)}
+  .fontes{margin-top:18px;padding-top:14px;border-top:1px solid rgba(11,21,48,.1);font-size:.8rem;color:#5a6070}
+  .fontes b{color:var(--azul-marinho);display:block;margin-bottom:4px;letter-spacing:1px;text-transform:uppercase;font-size:.72rem}
+
+  /* ADVOGADAS */
+  .advogadas{background:linear-gradient(180deg,var(--azul-noite),var(--azul-marinho))}
+  .adv-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:8px}
+  @media(max-width:760px){.adv-grid{grid-template-columns:1fr}}
+  .adv-card{background:rgba(11,21,48,.5);border:1px solid rgba(212,175,55,.3);border-radius:16px;padding:40px 32px;text-align:center}
+  .monograma{width:88px;height:88px;border-radius:50%;background:var(--dourado);color:var(--azul-noite);font-family:var(--serif);font-size:2rem;font-weight:700;display:flex;align-items:center;justify-content:center;margin:0 auto 18px}
+  .adv-card h3{color:var(--marfim);font-size:1.3rem;margin-bottom:4px}
+  .adv-card .oab{color:var(--dourado);font-size:.9rem;letter-spacing:1px;font-weight:600;margin-bottom:14px}
+  .adv-card p{opacity:.85;font-weight:300;font-size:.95rem}
+  .sobre-text{max-width:760px;margin:0 auto 48px;text-align:center;opacity:.88;font-weight:300}
 
   /* FAQ */
   details{background:var(--azul-marinho);border:1px solid rgba(212,175,55,.2);border-radius:10px;margin-bottom:14px;padding:18px 22px}
@@ -81,26 +94,11 @@
   summary::marker{color:var(--dourado)}
   details p{margin-top:12px;opacity:.85;font-weight:300}
 
-  /* ARTIGOS */
-  .artigo{background:var(--azul-marinho);border:1px solid rgba(212,175,55,.2);border-radius:14px;padding:30px 28px;margin-bottom:20px}
-  .artigo h3{color:var(--dourado);font-size:1.2rem;margin-bottom:6px}
-  .artigo .data{font-size:.8rem;letter-spacing:1px;text-transform:uppercase;opacity:.55;margin-bottom:14px}
-  .artigo p{opacity:.85;font-weight:300;font-size:.98rem;margin-bottom:10px}
-  .artigo .leia{color:var(--dourado);text-decoration:none;font-weight:600;font-size:.9rem}
-  .artigo .leia:hover{text-decoration:underline}
-
-  /* DEPOIMENTOS */
-  .depo{background:rgba(27,42,74,.6);border:1px solid rgba(212,175,55,.25);border-radius:14px;padding:28px}
-  .depo .aspas{font-family:var(--serif);font-size:2.4rem;color:var(--dourado);line-height:1}
-  .depo p{opacity:.9;font-weight:300;font-style:italic;margin:10px 0 16px}
-  .depo .autor{font-size:.85rem;letter-spacing:1px;text-transform:uppercase;color:var(--dourado)}
-  .depo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
-
-  /* CTA */
-  .cta-box{background:linear-gradient(135deg,var(--azul-marinho),var(--azul-noite));border:1px solid rgba(212,175,55,.35);border-radius:20px;padding:64px 32px;text-align:center}
+  /* CTA final */
+  .cta-box{background:linear-gradient(135deg,var(--azul-marinho),var(--azul-noite));border:1px solid rgba(212,175,55,.35);border-radius:20px;padding:56px 32px;text-align:center}
   .cta-box h2{font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:14px}
   .cta-box h2 span{color:var(--dourado)}
-  .cta-box p{opacity:.85;max-width:520px;margin:0 auto 30px;font-weight:300}
+  .cta-box p{opacity:.85;max-width:540px;margin:0 auto 28px;font-weight:300}
 
   footer{border-top:1px solid rgba(212,175,55,.2);padding:36px 0;text-align:center;font-size:.85rem;opacity:.65}
   footer .sig{font-family:var(--serif);color:var(--dourado);font-size:1rem;opacity:1;margin-bottom:8px}
@@ -113,8 +111,8 @@
     <a class="logo" href="#top">Ferraz <span>&</span> Ferreira</a>
     <ul class="nav-links">
       <li><a href="#areas">Áreas</a></li>
-      <li><a href="#artigos">Dicas</a></li>
-      <li><a href="#sobre">O Escritório</a></li>
+      <li><a href="#conteudo">Conteúdo</a></li>
+      <li><a href="#advogadas">Advogadas</a></li>
       <li><a href="#faq">Dúvidas</a></li>
       <li class="keep"><a class="nav-cta" href="https://wa.me/5511989275738" target="_blank">Chame no WhatsApp</a></li>
     </ul>
@@ -125,10 +123,10 @@
   <div class="container">
     <div class="kicker">Advocacia especializada</div>
     <h1>Cuidando do que é seu, <em>com profissionalismo e segurança.</em></h1>
-    <p class="sub">Inventário e partilha, divórcio, curatela, INSS, planos de saúde e direito do consumidor — orientação clara, do primeiro contato até a resolução. Atendimento em São Paulo/SP e à distância.</p>
+    <p class="sub">Inventário e partilha, planos de saúde, regularização de imóveis, INSS e direito do consumidor — orientação clara, do primeiro contato até a resolução. Atendimento em São Paulo/SP e à distância.</p>
     <div class="hero-btns">
       <a class="btn btn-gold" href="https://wa.me/5511989275738" target="_blank">Chame no WhatsApp</a>
-      <a class="btn btn-ghost" href="#areas">Conheça as áreas</a>
+      <a class="btn btn-ghost" href="#conteudo">Leia nosso conteúdo</a>
     </div>
   </div>
 </header>
@@ -142,90 +140,118 @@
         <div class="icon">⚖️</div>
         <h3>Inventário e Partilha</h3>
         <p>Regularização da herança com agilidade — judicial ou em cartório. Prazos, impostos e partilha conduzidos com segurança, evitando multas e conflitos familiares.</p>
+        <span class="lei">CPC, art. 611 · Lei 11.441/07</span>
       </div>
       <div class="card">
-        <div class="icon">📜</div>
-        <h3>Inventário Extrajudicial</h3>
-        <p>Quando todos os herdeiros são maiores, capazes e estão de acordo, o inventário pode ser feito em cartório, por escritura pública (Lei 11.441/07) — mais rápido, menos burocrático e sem ação judicial.</p>
+        <div class="icon">🛡️</div>
+        <h3>Planos de Saúde</h3>
+        <p>Negativa de cobertura, revisão de contratos, cláusulas abusivas, reajustes e carências. Defesa técnica com base na legislação e na jurisprudência dos tribunais superiores.</p>
+        <span class="lei">Lei 9.656/98 · CDC · Súmula 608 STJ</span>
+      </div>
+      <div class="card">
+        <div class="icon">🏠</div>
+        <h3>Imóveis e Regularização</h3>
+        <p>Usucapião extrajudicial em cartório, regularização de matrícula, adjudicação compulsória e questões de propriedade — com menos custo e menos tempo que a via judicial.</p>
+        <span class="lei">Lei 6.015/73, art. 216-A</span>
       </div>
       <div class="card">
         <div class="icon">💍</div>
-        <h3>Divórcio</h3>
+        <h3>Divórcio e Família</h3>
         <p>Divórcio consensual ou litigioso, judicial ou em cartório, com atenção à partilha de bens, guarda, alimentos e reorganização familiar com o menor desgaste possível.</p>
-      </div>
-      <div class="card">
-        <div class="icon">🤝</div>
-        <h3>Curatela</h3>
-        <p>Ações de curatela para proteção de idosos e pessoas incapazes, incluindo o procedimento do Estatuto da Pessoa com Deficiência, com curatela menos restritiva possível.</p>
+        <span class="lei">Código Civil, arts. 226 e ss.</span>
       </div>
       <div class="card">
         <div class="icon">🏛️</div>
         <h3>INSS e Previdenciário</h3>
-        <p>Aposentadorias, auxílios, BPC/LOAS, revisões e recursos. Análise completa do seu histórico contributivo para buscar o benefício a que você tem direito.</p>
+        <p>Aposentadorias, auxílios, BPC/LOAS, revisões e recursos. Análise completa do histórico contributivo para buscar o benefício a que você tem direito.</p>
+        <span class="lei">Lei 8.213/91 · Decreto 3.048/99</span>
       </div>
       <div class="card">
-        <div class="icon">🛡️</div>
-        <h3>Planos de Saúde e Consumidor</h3>
-        <p>Negativa de cobertura, carência abusiva, rede credenciada insuficiente, cobranças indevidas e negativação injusta. Defesa técnica contra práticas abusivas.</p>
+        <div class="icon">🤝</div>
+        <h3>Consumidor e Curatela</h3>
+        <p>Cobranças indevidas, negativação injusta e relações de consumo em geral; ações de curatela para proteção de idosos e pessoas incapazes, sempre na medida menos restritiva.</p>
+        <span class="lei">CDC · Lei 13.146/15 (EPCD)</span>
       </div>
     </div>
   </div>
 </section>
 
-<section id="artigos">
+<section id="conteudo" class="artigos-sec">
   <div class="container">
-    <h2 class="sec-title">Dicas e <span>orientações</span></h2>
-    <p class="sec-sub">Conteúdo informativo do escritório — linguagem simples, orientação confiável.</p>
+    <h2 class="sec-title">Conteúdo <span>jurídico</span></h2>
+    <p class="sec-sub-dark">Orientação informativa com base em legislação e jurisprudência — linguagem simples, fundamento verificável.</p>
+
+    <article class="artigo">
+      <h3>Plano de saúde pode negar tratamento que não está no rol da ANS?</h3>
+      <div class="data">Outubro 2026 · Planos de Saúde</div>
+      <p><strong>Em regra, não.</strong> O rol de procedimentos da ANS passou a ser tratado como <strong>exemplificativo</strong>: se o tratamento prescrito pelo médico assistente não está na lista, a operadora deve cobri-lo desde que comprovadamente eficaz e não experimental. Foi o que fixou o Superior Tribunal de Justiça (Tema repetitivo 1.064) e o que a Lei nº 14.454/2022 incorporou à Lei dos Planos de Saúde (art. 10, § 13, da Lei nº 9.656/98).</p>
+      <p>Além disso, os contratos de plano de saúde se sujeitam ao Código de Defesa do Consumidor (Súmula 608 do STJ, salvo os planos de autogestão) e suas cláusulas devem ser interpretadas da forma <strong>mais favorável ao consumidor</strong> (art. 47 do CDC) — especialmente quando em jogo a saúde e a vida.</p>
+      <p>Na prática: guarde a negativa por escrito, o relatório médico e o histórico do tratamento. São eles que fundamentam a exigência da cobertura, na via administrativa ou judicial.</p>
+      <div class="fontes"><b>Fontes</b>
+        BRASIL. Lei nº 9.656, de 3 de junho de 1998; Lei nº 14.454, de 2022. BRASIL. Lei nº 8.078, de 11 de setembro de 1990 (CDC), arts. 47 e 51. BRASIL. STJ, Súmula 608; Tema repetitivo 1.064. ANS. Rol de Procedimentos e Eventos em Saúde (RN nº 465/2021, com atualizações).
+      </div>
+    </article>
+
+    <article class="artigo">
+      <h3>Revisão de contrato de plano de saúde: o que pode ser revisto</h3>
+      <div class="data">Outubro 2026 · Planos de Saúde</div>
+      <p>Nem toda cláusula que está no contrato pode ser aplicada. O Código de Defesa do Consumidor considera <strong>nulas de pleno direito</strong> as cláusulas que exonerem o fornecedor de responsabilidade, transfiram responsabilidades a terceiros ou limitem direitos do consumidor (art. 51 do CDC).</p>
+      <p>Os reajustes também têm limites legais: o reajuste por faixa etária, por exemplo, é regulado pela Lei nº 9.656/98 (art. 15) e pelas normas da ANS, e o aumento deve observar a variação de custos — não pode ser disfarce de reajuste abusivo. Cláusulas ambíguas se interpretam em favor do beneficiário (art. 47 do CDC), e a relação é regida pela boa-fé objetiva (art. 422 do Código Civil).</p>
+      <p>Uma revisão contratual bem-feita começa pela análise do contrato, dos reajustes aplicados desde a contratação e do histórico de negativas. Cada caso revela pontos diferentes — e é essa análise que indica se há fundamento para revisão ou reparação.</p>
+      <div class="fontes"><b>Fontes</b>
+        BRASIL. Lei nº 8.078, de 11 de setembro de 1990 (CDC), arts. 47, 51 e 54. BRASIL. Lei nº 9.656, de 3 de junho de 1998, art. 15. BRASIL. Lei nº 10.406, de 10 de janeiro de 2002 (Código Civil), art. 422. ANS. Normas sobre reajuste de planos de saúde.
+      </div>
+    </article>
+
+    <article class="artigo">
+      <h3>Usucapião extrajudicial: regularizar o imóvel em cartório, sem ação judicial</h3>
+      <div class="data">Outubro 2026 · Imóveis</div>
+      <p>Quem possui um imóvel por anos, sem escritura em seu nome, pode obter a regularização da propriedade <strong>diretamente no cartório de registro de imóveis</strong>. É a usucapião extrajudicial, prevista no art. 216-A da Lei nº 6.015/73 (incluído pelo Código de Processo Civil de 2015) — sem prejuízo da via judicial, que continua disponível.</p>
+      <p>O pedido é feito por advogado e instruído com ata notarial que ateste o tempo e a forma da posse, além dos documentos do imóvel e da planta. O cartório notifica os titulares de direitos registrados e os entes públicos; sem oposição, o registro é feito. Prazos e requisitos variam conforme a modalidade de usucapião (urbana, rural, especial ou ordinária — Código Civil, arts. 1.238 a 1.244).</p>
+      <p>Para famílias que moram há décadas em imóvel sem registro regular, esse procedimento transforma uma situação de insegurança em propriedade formalizada — com custo e tempo bem menores que uma ação judicial.</p>
+      <div class="fontes"><b>Fontes</b>
+        BRASIL. Lei nº 6.015, de 31 de dezembro de 1973 (Lei de Registros Públicos), art. 216-A. BRASIL. Lei nº 13.105, de 16 de março de 2015 (CPC), art. 1.071. BRASIL. Lei nº 10.406, de 10 de janeiro de 2002 (Código Civil), arts. 1.238 a 1.244. CNJ. Normas do Foro Extrajudicial (usucapião extrajudicial).
+      </div>
+    </article>
 
     <article class="artigo">
       <h3>Inventário: o prazo de 2 meses que evita multa</h3>
       <div class="data">Outubro 2026 · Inventário</div>
       <p>O Código de Processo Civil (art. 611) estabelece que o inventário deve ser instaurado em até 2 meses a contar do falecimento. Passado esse prazo, pode incidir multa sobre o ITCMD — o imposto de transmissão, cujo percentual varia conforme o estado.</p>
-      <p>E há uma alternativa que poucos conhecem: quando todos os herdeiros são maiores, capazes e estão de acordo, o inventário pode ser feito em cartório, por escritura pública (Lei 11.441/07), sem ação judicial — mais rápido e com menos burocracia.</p>
-      <a class="leia" href="https://wa.me/5511989275738" target="_blank">Dúvidas sobre o seu caso? Chame 💬</a>
+      <p>E há uma alternativa que poucos conhecem: quando todos os herdeiros são maiores, capazes e estão de acordo, o inventário pode ser feito em cartório, por escritura pública (Lei nº 11.441/2007), sem ação judicial — mais rápido e com menos burocracia.</p>
+      <div class="fontes"><b>Fontes</b>
+        BRASIL. Lei nº 13.105, de 16 de março de 2015 (CPC), art. 611. BRASIL. Lei nº 11.441, de 29 de dezembro de 2007.
+      </div>
     </article>
 
     <article class="artigo">
       <h3>INSS negou o benefício? A negativa não é o fim</h3>
       <div class="data">Outubro 2026 · INSS</div>
       <p>Receber uma negativa do INSS é mais comum do que se imagina — e, na maioria das vezes, reversível. O primeiro passo é entender o motivo: falta de tempo de contribuição, carência, enquadramento incorreto ou análise equivocada do histórico.</p>
-      <p>Com a análise técnica correta do CNIS e do histórico contributivo, é possível recorrer administrativamente ou ingressar com ação judicial. Cada caminho tem seu momento — e a escolha certa aumenta as chances de êxito.</p>
-      <a class="leia" href="https://wa.me/5511989275738" target="_blank">Quer analisar seu caso? Chame 💬</a>
-    </article>
-
-    <article class="artigo">
-      <h3>Plano de saúde pode negar exame ou cirurgia?</h3>
-      <div class="data">Outubro 2026 · Planos de Saúde</div>
-      <p>Em regra, não. Os planos de saúde seguem o rol de cobertura da ANS, e a negativa sem justificativa técnica é considerada abusiva. Isso vale para exames, cirurgias, internações e tratamentos previstos no contrato.</p>
-      <p>Quando há risco à saúde, é possível exigir a cobertura em caráter de urgência, inclusive por via judicial. Guarde sempre a negativa por escrito — ela é a prova central do seu caso.</p>
-      <a class="leia" href="https://wa.me/5511989275738" target="_blank">Recebeu uma negativa? Chame 💬</a>
+      <p>Com a análise técnica do CNIS e do histórico contributivo, é possível apresentar recurso administrativo ou ingressar com ação judicial. Cada caminho tem seu momento — e a escolha certa aumenta as chances de êxito.</p>
+      <div class="fontes"><b>Fontes</b>
+        BRASIL. Lei nº 8.213, de 24 de julho de 1991. BRASIL. Decreto nº 3.048, de 12 de maio de 1999. BRASIL. Lei nº 9.784, de 29 de janeiro de 1999 (processo administrativo).
+      </div>
     </article>
   </div>
 </section>
 
-<section id="sobre" class="sobre">
+<section id="advogadas" class="advogadas">
   <div class="container">
-    <div class="sobre-grid">
-      <div>
-        <h2>Advocacia <span style="color:var(--dourado)">próxima</span> e transparente</h2>
-        <p>O Ferraz e Ferreira Advogadas nasceu para oferecer atendimento jurídico humano e direto: você entende cada etapa do seu caso, sem juridiquês e sem surpresas.</p>
-        <p>Especialização em inventários e partilhas, com atuação em direito de família (divórcio e curatela), matéria previdenciária e de consumo.</p>
-        <ul class="valores">
-          <li>Atendimento claro, do início ao fim</li>
-          <li>Estudo individualizado de cada caso</li>
-          <li>Comunicação constante sobre o andamento</li>
-          <li>Soluções práticas, inclusive extrajudiciais</li>
-        </ul>
+    <h2 class="sec-title">Quem <span>atende você</span></h2>
+    <p class="sobre-text">O Ferraz e Ferreira Advogadas nasceu para oferecer atendimento jurídico humano e direto: você entende cada etapa do seu caso, sem juridiquês e sem surpresas. Especialização em inventários e partilhas, com atuação em planos de saúde, regularização de imóveis, família, matéria previdenciária e de consumo.</p>
+    <div class="adv-grid">
+      <div class="adv-card">
+        <div class="monograma">EF</div>
+        <h3>Enilda Ferraz da Cunha</h3>
+        <div class="oab">OAB/SP 249.980</div>
+        <p>Especialista em inventários e partilhas. Atuação em planejamento sucessório, família, previdenciário e direito do consumidor, com foco em soluções práticas — inclusive extrajudiciais.</p>
       </div>
-      <div class="sobre-card">
-        <div class="big">6</div>
-        <div class="lbl">Áreas de atuação</div>
-        <div class="row"></div>
-        <div class="big">100%</div>
-        <div class="lbl">Atendimento personalizado</div>
-        <div class="row"></div>
-        <div class="big">Online</div>
-        <div class="lbl">Atendimento também à distância</div>
+      <div class="adv-card">
+        <div class="monograma">EF</div>
+        <h3>Eulina Arlindo Ferreira</h3>
+        <div class="oab">OAB/SP 248.476</div>
+        <p>Advocacia dedicada à defesa do consumidor e dos beneficiários de planos de saúde, com análise técnica de contratos, coberturas e negativas de tratamento.</p>
       </div>
     </div>
   </div>
@@ -241,19 +267,23 @@
     </details>
     <details>
       <summary>Todo inventário precisa de ação judicial?</summary>
-      <p>Não. Quando todos os herdeiros são maiores, capazes e estão de acordo, o inventário pode ser feito em cartório, por escritura pública (Lei 11.441/07) — de forma mais rápida e com menos burocracia.</p>
+      <p>Não. Quando todos os herdeiros são maiores, capazes e estão de acordo, o inventário pode ser feito em cartório, por escritura pública (Lei nº 11.441/2007) — de forma mais rápida e com menos burocracia.</p>
+    </details>
+    <details>
+      <summary>O plano de saúde pode negar tratamento fora do rol da ANS?</summary>
+      <p>Em regra, não. O rol da ANS é exemplificativo (STJ, Tema 1.064; Lei nº 14.454/2022): tratamentos prescritos pelo médico assistente, comprovadamente eficazes e não experimentais, devem ser cobertos. Cláusulas contratuais se interpretam em favor do consumidor (art. 47 do CDC).</p>
+    </details>
+    <details>
+      <summary>Quando vale a pena revisar o contrato do plano de saúde?</summary>
+      <p>Quando há cláusulas abusivas, reajustes fora dos limites legais, negativas recorrentes ou exclusões genéricas. A análise começa pelo contrato e pelo histórico da relação com a operadora — cada caso revela pontos diferentes.</p>
+    </details>
+    <details>
+      <summary>Como funciona a usucapião em cartório?</summary>
+      <p>O pedido (art. 216-A da Lei nº 6.015/73) é instruído por advogado com ata notarial que atesta a posse, documentos do imóvel e planta. O cartório notifica os interessados; sem oposição, o registro da propriedade é feito no próprio cartório.</p>
     </details>
     <details>
       <summary>O divórcio pode ser feito em cartório?</summary>
       <p>Sim. O divórcio consensual — quando o casal está de acordo, sem filhos menores ou incapazes — pode ser lavrado em cartório por escritura pública, com advogado assistindo as partes. Havendo desacordo ou filhos menores, o caminho é judicial.</p>
-    </details>
-    <details>
-      <summary>Quando é necessária a curatela?</summary>
-      <p>Quando a pessoa, por idade, deficiência ou saúde, não consegue tomar decisões sobre seus interesses. A curatela deve ser a menos restritiva possível, preservando a autonomia da pessoa — e o pedido tramita na Justiça com avaliação técnica.</p>
-    </details>
-    <details>
-      <summary>O plano de saúde pode negar meu exame ou cirurgia?</summary>
-      <p>Em regra, não. A ANS regulamenta o plano mínimo de cobertura, e a negativa sem justificativa técnica é abusiva. É possível exigir a cobertura por via administrativa ou judicial, inclusive em caráter de urgência quando há risco à saúde.</p>
     </details>
     <details>
       <summary>Meu benefício do INSS foi negado. E agora?</summary>
@@ -279,7 +309,7 @@
 <footer>
   <div class="sig">Ferraz e Ferreira Advogadas — cuidando do que é seu, com profissionalismo e segurança.</div>
   <p>Este site tem caráter exclusivamente informativo, em conformidade com o Código de Ética e Disciplina da OAB. Não há promessa ou garantia de resultado.</p>
-  <p style="margin-top:6px">OAB/SP nº [insira depois] · São Paulo/SP · [e-mail de contato]</p>
+  <p style="margin-top:6px">Enilda Ferraz da Cunha — OAB/SP 249.980 · Eulina Arlindo Ferreira — OAB/SP 248.476 · São Paulo/SP · enilda@ferrazeferreiraadvocados.com.br</p>
 </footer>
 
 </body>
